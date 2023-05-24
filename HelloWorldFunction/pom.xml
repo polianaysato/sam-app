@@ -40,6 +40,11 @@
             <artifactId>groupdocs-metadata</artifactId>
             <version>20.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.12.472</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -49,6 +54,9 @@
           <artifactId>maven-shade-plugin</artifactId>
           <version>3.2.4</version>
           <configuration>
+              <configuration>
+                <argLine>-Xmx512m</argLine>
+              </configuration>
           </configuration>
           <executions>
             <execution>
